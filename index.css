@@ -186,11 +186,12 @@ main {
 /**** about */
 
 .about {
+
     display: flex;
     align-items:stretch; 
     justify-content: center;
     flex-direction: row;
-    padding: 50px 70px;
+    padding: 100px 70px;
     
 }
 
