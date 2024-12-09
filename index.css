@@ -162,9 +162,10 @@ main {
     height: 650px;
     background-image: linear-gradient(#00000080, #79797980),
                                      url('./images/bg-home.jpg');
-    background-position: center;
+    background-position:center;
     background-attachment: fixed;
-
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .home div {
@@ -183,6 +184,30 @@ main {
     margin: 0;
     max-width: 800px;
     color: var(--main-black);
+}
+
+@media  (max-width:900px) {
+    .home div {
+        background-color:transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+        text-align: center;
+    }
+    
+.home {
+    background-position: center;
+    background-attachment:scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
 }
 /**** about */
 
@@ -271,6 +296,7 @@ main {
         white-space: nowrap; 
         color: rgb(157, 157, 157);
         font-size: 1.3rem;
+        text-shadow: #bebebe 0px 15px 10px;
     }
  
     @keyframes slide {
@@ -311,16 +337,6 @@ main {
     flex-wrap: nowrap;
     overflow: hidden;
     overflow-x: auto;
-    animation: up 3s ease-in-out;
-}
-@keyframes up {
-    0%{
-        opacity: .4;
-        transform: translateY(100px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
 }
 .card{
     width: 400px;
@@ -427,21 +443,41 @@ main {
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: stretch;
-    padding: 30px 200px;
+    justify-content: center;
+    padding: 20px;
 }
-.do-row div{
+/* .do-row div{
     flex: 1 0 0;
-}
+     animation: up 1s ease-in-out;
+} */
 .do-content{
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   flex-direction: row;
+   width: 100%;
    
 }
+.do-content div{
+    flex: 1 0 0;
+    
+}
+.do-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .do-content h1{
-
+    min-width: 300px;
+    max-width: 550px;
+    
 }
 .do-content p{
     text-align: justify;
     font-size: .9rem;
+    min-width: 300px;
+    max-width: 550px;
 }
 .do-image {
     display: flex;
@@ -454,8 +490,21 @@ main {
 }   
 
 
+
+@keyframes up {
+    0%{
+        opacity: .4;
+        transform: translateY(100px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
 /********** team section */
 
-.team{
-
+.team-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
 }
