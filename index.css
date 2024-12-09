@@ -239,7 +239,7 @@ main {
     .about div:nth-child(2) img {
         animation: rotate 80s linear infinite;
         margin-top: 20px;
-        filter: drop-shadow(10px 10px 20px #bababa80);
+        /* filter: drop-shadow(10px 10px 20px #bababa80); */
     }
     
     
@@ -410,3 +410,52 @@ main {
     /* line-height: 43px; */
 }
 
+
+
+/****************** What we do */
+.we-do-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.do-row{
+    width: 100%;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: stretch;
+    padding: 30px 200px;
+}
+.do-row div{
+    flex: 1 0 0;
+}
+.do-content{
+   
+}
+.do-content h1{
+
+}
+.do-content p{
+    text-align: justify;
+    font-size: .9rem;
+}
+.do-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.do-image img{
+    width:150px;
+    height: auto;
+}   
+
+
+/********** team section */
+
+.team{
+
+}
