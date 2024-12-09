@@ -160,7 +160,8 @@ main {
 
 .home {
     height: 650px;
-    background-image: linear-gradient(#00000080, #79797980), url('./images/bg-home.jpg');
+    background-image: linear-gradient(#00000080, #79797980),
+                                     url('./images/bg-home.jpg');
     background-position: center;
     background-attachment: fixed;
 
@@ -306,7 +307,10 @@ main {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-x: auto;
     animation: up 3s ease-in-out;
 }
 @keyframes up {
@@ -320,6 +324,7 @@ main {
 }
 .card{
     width: 400px;
+    min-width: 400px;
     position: relative;
     border-radius: 10px;
     padding: 20px;
