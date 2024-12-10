@@ -215,7 +215,9 @@ header nav a{
     cursor: pointer;
     z-index: 1;
 }
-
+.hero-proj-col div a:nth-child(3){
+    font-size: .8rem;
+}
 @keyframes up {
     0%{
         height: 2%; 

@@ -48,7 +48,7 @@ section {
     justify-content: space-between;
     flex-direction: row;
     /* background-color: var(--white-grey); */
-    background: none;
+    background: var(--white-grey);
     border-bottom: 1px solid #dededec1;
     padding: 10px 60px;
     position: sticky;
