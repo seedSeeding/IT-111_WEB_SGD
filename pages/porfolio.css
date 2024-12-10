@@ -451,8 +451,7 @@ header nav a{
 
 .ach img {
     width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 3; 
+    height: 200px; /* Set a fixed height for images */
     object-fit: cover;
     border-bottom: 2px solid var(--primary-color);
 }
@@ -481,6 +480,8 @@ header nav a{
         max-width: 100%;
     }
 }
+
+
 
 
 
