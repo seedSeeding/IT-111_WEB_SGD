@@ -15,6 +15,9 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: var(--roboto);
+    
+
 }
 
 body,
@@ -148,7 +151,7 @@ section {
 }
 
 .sec-title{
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--main-black);
 }
 /********** Home */
@@ -262,20 +265,13 @@ main {
     }
 
     .about div:nth-child(2) img {
-        animation: rotate 80s linear infinite;
+        animation: rotate 150s linear infinite;
         margin-top: 20px;
         /* filter: drop-shadow(10px 10px 20px #bababa80); */
     }
     
     
-    @keyframes rotate {
-        0% {
-            transform: rotate(0deg); 
-        }
-        100% {
-            transform: rotate(360deg);
-        }
-    }
+    
     
     /*** text banner */
 
@@ -296,9 +292,14 @@ main {
         white-space: nowrap; 
         color: rgb(157, 157, 157);
         font-size: 1.3rem;
-        text-shadow: #bebebe 0px 15px 10px;
+        /* text-shadow: #bebebe 0px 15px 10px; */
+    }   
+    .banner-text span i{
+        margin-right: 7px;
+        color: var(--main-green);
+        animation: rotate-op 12s linear infinite;
+        text-shadow: none;
     }
- 
     @keyframes slide {
         0% {
             transform: translateX(100vw); 
@@ -309,7 +310,22 @@ main {
        
 
     }
-    
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg); 
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes rotate-op {
+        0% {
+            transform: rotate(0deg); 
+        }
+        100% {
+            transform: rotate(-360deg);
+        }
+    }
 /*** cards  section **/
 
 .cards-section{
@@ -482,13 +498,22 @@ main {
 .do-image {
     display: flex;
     align-items: center;
+    position: relative;
     justify-content: center;
+
 }
 .do-image img{
     width:150px;
     height: auto;
 }   
-
+.circle{
+    border: 3px dashed var(--main-green);
+    width:170px;
+    height: 170px;
+    border-radius: 100%;
+    position: absolute;
+    animation: rotate 50s linear infinite;
+}
 
 
 @keyframes up {
@@ -507,4 +532,236 @@ main {
     align-items: center;
     justify-content: center;
     margin-top: 100px;
+    flex-direction: column;
+    padding-bottom: 100px;
+    
+}
+
+.members-con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.member{
+    width: 300px;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    position: relative;
+}
+
+.member-img{}
+.member-img img{ 
+    max-width: 200px;
+    min-width: 100px;
+    height: auto;
+}
+.member-info{
+    width: 100%;
+}
+.member-info strong{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.member-info strong span{
+    font-size: .9rem;
+    color: var(--main-green);
+    font-weight: 400;
+}
+.member-acc{
+    
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    
+
+}
+
+.member-acc a{
+    text-decoration: none;
+    color: var(--semi-black);
+    display: none;
+}
+.member:hover a{
+    display: block;
+    animation: up-a 1s ease-in-out;
+}
+@keyframes up-a {
+    0%{
+        opacity: .2;
+        transform: translateY(20px);
+
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.member-acc a i{
+    border:1px solid rgb(166, 166, 166);
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.member-acc a:hover i{
+    border:1px solid var(--main-green);
+    color: var(--main-green);
+}
+
+/* footer */
+
+footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#00110bca, #00110bca), url('./images/footer.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 120px;
+    background-position: center;
+}
+
+.footer-con{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.footer-top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px;
+    background-color: var(--main-green);
+    background-image: url('./images/leaf.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+.footer-top h1{
+    margin: 0;
+    padding:0;
+    color: white;
+    
+
+}
+.footer-top strong{
+    color: white;
+    font-weight: 500;
+    
+}
+
+.footer-top div{
+    display:flex;
+    align-items: center;   
+    column-gap: 10px; 
+    
+}
+
+.footer-top i{
+   border: 1px solid white;
+   color: white;
+   padding: 8px;
+   border-radius: 100%;
+
+
+}
+
+.footer-middle{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 70px;
+    padding-bottom: 100px;
+}
+
+.footer-middle div{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    row-gap: 10px;
+    
+}
+
+.footer-middle div:nth-child(1) strong{
+    font-size: 1.3rem;
+
+}
+
+.footer-middle div:nth-child(1) p{
+    color: var(--semi-black);
+
+}
+
+.footer-middle div:nth-child(1) span i{
+    color: var(--main-green);
+
+
+}
+
+.footer-middle div:nth-child(1) span{
+    color: white;
+    font-size: 0.8rem;
+}
+
+.footer-middle div:nth-child(2) a,.footer-middle div:nth-child(3) a{
+    color: var(--semi-black);
+    font-size: 0.8rem;
+    text-decoration: none;
+    
+    
+}
+
+
+.footer-middle div:nth-child(2) a:hover,.footer-middle div:nth-child(3) a:hover{
+    color: var(--main-green);
+   
+    
+}
+
+.footer-middle strong{
+    color: white;
+}
+
+.footer-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border-top: 1px solid var(--semi-black);
+    font-size: .8rem;
+    
+}
+
+.footer-bottom span{
+    margin-left: 3px;
 }
