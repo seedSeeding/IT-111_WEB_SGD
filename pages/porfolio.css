@@ -196,16 +196,14 @@ header nav a{
     width: 400px !important;
 
 }
-.hero-proj-col:hover div{
-    display: flex;
-}
+
 .hero-proj-col div{
     position: absolute;
     background-color: rgba(255, 255, 255, 0.611);
     width: 100%;
     height: 50%;
     bottom: 0;
-    display: none;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
@@ -214,11 +212,13 @@ header nav a{
 }
 .hero-proj-col div a {
     color: black;
+    cursor: pointer;
+    z-index: 1;
 }
 
 @keyframes up {
     0%{
-        height: 2%;
+        height: 2%; 
         transform: translate(0px ,-20px);
         opacity: .5;
     }
@@ -239,7 +239,13 @@ header nav a{
  } */
 
  /*  about */
-
+/* .circle{
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--main-black);
+    border-radius: 100%;
+    position: fixed;
+} */
  .about {
     padding-top: 350px;
     display: flex;
@@ -370,7 +376,7 @@ header nav a{
 .skills{
     flex-grow: 2;
 }
-.skills div{
+.skill-row{
     width: 100%;
     border-bottom: 1px solid var(--main-black);
     padding: 20px 10px;
@@ -379,14 +385,31 @@ header nav a{
     justify-content: space-between;
    }
 
-   .skills div strong{
+   .skill-row strong{
     display: flex;
     column-gap: 10px;
    }
 .skills div span{
-   
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   justify-content: center;
 }
-
+.bar{
+    border: none !important;
+    height: 2px !important;
+    width: 100%;
+    margin-right: 20px;
+    margin-left: 100px;
+    position: relative;
+    width: 140px;
+    background-color: white;
+}
+.bar div{
+    height: 100%;
+    width: 0%;
+    background-color: var(--main-black);
+}
 /* achievments */
 
 .ach-section{
@@ -404,6 +427,7 @@ header nav a{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 
 .ach {
@@ -418,6 +442,9 @@ header nav a{
 .ach img{
     width: 280px;
     height: 200px;
+    max-height: 200px;
+    min-height: 200px;
+    border: 1px solid var(--semi-black);
 }
 .ach strong{
     margin: 5px;
