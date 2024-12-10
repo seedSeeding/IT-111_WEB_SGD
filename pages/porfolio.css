@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 :root {
     --clean-white: #F4F4F4;
     --white-grey: #F8F8FF;
     --roboto: "Roboto Condensed", sans-serif;
+    --kaushan:"Kaushan Script", cursive;
     --border-grey: #303030;
     /* --main-green:#55DF5E; */
     --main-green:#79B900;
@@ -33,7 +34,564 @@ html {
     position: relative;
     scroll-behavior: smooth;
 }
+.sec-title{
+    font-size: 2.5rem;
+    color: var(--main-black);
+}
+/* Example: Change background color when a container has scrollable content */
+/* body:has(:nth-child(n+1))  header{
+    background-color: lightblue;
+  }
+   */
+/* header */
+
+header{
+    width: 100%;
+    padding: 10px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0;
+    background-color: transparent;
+    /* position: sticky; */
+    color: var(--white-grey);
+    top: 0;
+    z-index: 1;
+
+}
+header h1{
+    margin: 0;
+    padding: 0;font-family: var(--kaushan);
+    font-size: 2.2rem;
+}
+header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    column-gap: 20px;
+}
+header nav a{
+    text-decoration: none;
+    color: var(--white-grey);
+}
+/**** hero **/
+
+.hero{
+    width: 100%;
+    padding: 10px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    flex-direction: column;
+    position: relative;
+    
+    background-image: linear-gradient(to bottom right, #30c7b5, #00ac97, #006055,#17544b), url('../images/porfolio/bg.png');
+    /* background-image:; */
+    background-attachment: fixed;
+}
+.hero-intro{
+    width: 100%;
+    color: var(--white-grey);
+    margin-bottom: 20px;
+}
+.hero-intro h1{
+    font-size: 3rem;
+    max-width: 500px;
+}
 
 
+.hero-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.hero-content div:nth-child(1) {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   
+}
+.hero-prof img{
+    width: auto;
+    height: 400px;
+    margin-bottom: 100px;
+}
+.hero-prof span{
+    position: absolute;
+    right: 0;
+    color: var(--white-grey);
+    top: 20px;
+    font-size: 1.6rem;
+    max-width: 300px;
+    text-decoration:underline;
+    margin-bottom: 100px;
+
+}
+
+.hero-proj-con{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    
+    bottom: -200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    
+}
+.hero-label{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between !important;
+    padding: 20px;
+    border-bottom: 1px solid  var(--semi-black);
+}
+.hero-label h1{
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+}
+.hero-label a {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+}
+.hero-proj{
+    height: 270px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    overflow-x: auto;
+    padding: 10px;
+    margin-top: 10px;
+    column-gap: 10px;
+    flex-wrap: nowrap;
+
+}
+.hero-proj-col{
+    width: 400px !important;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    /* border-radius: 10px; */
+    /* box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px; */
+    
+}
+.hero-proj-col img{
+    height: 100%;
+    width: 400px !important;
+
+}
+.hero-proj-col:hover div{
+    display: flex;
+}
+.hero-proj-col div{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.611);
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    animation: up .5s ease-in-out;
+}
+.hero-proj-col div a {
+    color: black;
+}
+
+@keyframes up {
+    0%{
+        height: 2%;
+        transform: translate(0px ,-20px);
+        opacity: .5;
+    }
+    100%{
+        height: 50%;
+    }
+}
+/* .video-background {
+    position: fixed;
+       top: 50%;
+       left: 50%;
+       min-width: 100%;
+       min-height: 100%;
+       transform: translate(-50%, -50%);
+       object-fit: cover;
+       z-index: -1; 
+      
+ } */
+
+ /*  about */
+
+ .about {
+    padding-top: 350px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    position: relative;
+}
+.about strong{
+    color: var(--main-green);
+    font-size: 1.3rem;
+}
+.about div img {
+    width: 600px;
+    height: auto;
+}
+.about h1{
+    font-size: 2.3rem;
+}
+.about p{
+    color: var(--semi-black);
+    font-weight: 300;
+}
+.about h1, .about p{
+    max-width: 500px;
+}
+.about div {
+    height: 100%; 
+    padding: 20px;
+}
+.about div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 100px;
+}
+.about div:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* what i do */
+.what-i-do{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.what-i-do h1{
+    margin-bottom: 100px;
+}
+.do-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .do-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0;
+    flex: 1 0 0;
+    position: relative;
+    max-width: 440px;
+    max-height: 380px;
+   
+    background-color:var(--clean-white);
+    padding-top: 30px;
+    position: relative;
+  }
+  .do-row img{
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .do-row strong{
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  .do-row span{
+    text-align: center;
+    font-size: .95rem;
+    width: 80%;
+    margin: 10px;
+  }
+  .do-row button{
+    background-color: var(--main-black);
+    border-radius: 5px;
+    color: var(--white-grey);
+    padding: 5px 10px;
+    margin-bottom: 20px; 
+    cursor: pointer; 
+    transition: all .2s ease-in;
+    margin-top: 50px;
+    border: none;
+  }
+  .do-row button:hover{
+    background-color: transparent;
+    color: var(--main-black);
+    border-bottom: 1px solid var(--main-black);
+    border-radius: 0px;
+  
+  }
+  
+
+  /* skiils */
+
+  .skills-section{
+    padding: 50px;
+    display: flex;
+    margin: 100px 150px;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+    border-top: 1px solid var(--main-black);
+ 
+}
+.skills-section h1{
+    font-weight: 300;
+    margin-right: 100px;
+    flex-grow: 1;
+    align-self: first baseline;
+}
+
+.skills{
+    flex-grow: 2;
+}
+.skills div{
+    width: 100%;
+    border-bottom: 1px solid var(--main-black);
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   }
+
+   .skills div strong{
+    display: flex;
+    column-gap: 10px;
+   }
+.skills div span{
+   
+}
+
+/* achievments */
+
+.ach-section{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ach-con{
+  
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ach {
+    display: flex;
+
+    justify-content: left;
+    flex-direction: column;
+    max-width: 280px;
+    max-height: 300px;
+   
+}
+.ach img{
+    width: 280px;
+    height: 200px;
+}
+.ach strong{
+    margin: 5px;
+    color: var(--main-black);
+}
+.ach p{
+    font-size: .9rem;
+    text-align: justify;
+    color: var(--semi-black);
+}
 
 
+/* colaboration */
+
+.colab{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom right, #30c7b5, #00ac97, #006055,#17544b), url('../images/porfolio/bg.png');
+
+}
+.colab h1{
+    font-size: 3rem;
+}
+.colab strong{
+    font-size: 1.8rem;
+}
+.colab p{
+    max-width: 600px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.colab a{
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    border: 1px solid var(--main-green);
+    margin-top: 70px;
+    
+}
+/* contact */
+
+.contact{
+    width: 100%;
+    padding: 100px;
+    padding-top: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+
+.contact-info, .conect-form{
+    flex-grow: 1;
+
+}
+.contact-info{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+.contact-info strong{
+    font-size: 1.5rem;
+}
+.contact-info h1{
+    font-size: 3rem;
+    max-width: 600px;
+}
+.contacts{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 10px;
+}
+.contacts span i{
+    margin-right: 20px;
+    color: var(--main-green);
+}
+
+.conect-form{
+    display: flex;
+    justify-content: left;
+    
+}
+.conect-form form{
+    flex-grow: 1;
+    display: flex;
+    justify-content: left;
+   flex-direction: column;
+   gap: 10px;
+   row-gap: 20px;
+
+}
+.conect-form form div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: stretch;
+
+}
+.conect-form form div input{
+    flex-grow: 1;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid var(--main-black);
+    padding: 10px;
+
+}
+.conect-form form button{
+    padding: 5px 40px;
+    width: fit-content;
+    background-color: var(--main-black);
+    color: var(--white-grey);
+    margin-top: 50px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;    
+}
+.conect-form form button:hover{
+    background-color: var(--white-grey);
+    border-color: var(--main-black);
+    color: var(--main-black);
+}
+
+/* footer */
+
+footer{
+    width: 100%;
+    padding-top: 150px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+footer span{
+    color: var(--semi-black);
+}
+.footer-top{
+    border-top: 1px solid var(--main-black);
+    border-bottom: 1px solid var(--main-black);
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.footer-top h1{
+    font-family: var(--kaushan);
+    margin: 0;
+}
+
+.footer-top div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-top div a{
+    text-decoration: none;
+    color: var(--main-black);
+}
+
+.footer-acc a i{
+    font-size: 1.2rem;
+    color: var(--main-green);
+    
+}
+.footer-acc{
+    display: flex;
+    gap: 30px !important;
+    justify-content: right;
+}
