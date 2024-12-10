@@ -10,7 +10,6 @@
     --main-black:#001819;
     --semi-black:#7A7A7A;
 }
-
 /************* layout */
 * {
     box-sizing: border-box;
@@ -39,7 +38,7 @@ section {
     position: relative;
 }
 .txt-green{
-    color: green !important;
+    color: var(--main-green) !important;
 }
 /* header */
 .home-header {
@@ -48,7 +47,8 @@ section {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    background-color: var(--white-grey);
+    /* background-color: var(--white-grey); */
+    background: none;
     border-bottom: 1px solid #dededec1;
     padding: 10px 60px;
     position: sticky;
@@ -59,7 +59,9 @@ section {
 }
 
 .home-header img {
-    width: 300px;
+    width:90px;
+    margin: 0;
+    padding: 0;
     height: auto;
 }
 
@@ -162,23 +164,47 @@ main {
 }
 
 .home {
-    height: 650px;
-    background-image: linear-gradient(#00000080, #79797980),
-                                     url('./images/bg-home.jpg');
-    background-position:center;
-    background-attachment: fixed;
+    height: 750px;
+    /* background-image: linear-gradient(#00000080, #79797980),
+                                     url('./images/bg-home.jpg'); */
+    background-image: linear-gradient(#070000f6, #070000f6),url('./images/bg-home.jpg');
+
+    background-position: center;
+    background-attachment:scroll;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    margin-top: -112px;
+    /* background-position:center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
 
 .home div {
-    background-color: var(--white-grey);
+    /* background-color: var(--white-grey); */
+
+    background-color:rgba(0, 0, 0, 0.37);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    text-align: center;
+    
     padding: 60px 40px;
     padding-bottom: 25px;
 }
 
 .home div span {
-    color: #3C3B3B;
+    /* color: #3C3B3B; */
+    color: white;
     font-size: 1.3rem;
 }
 
@@ -186,7 +212,8 @@ main {
     font-size: 4rem;
     margin: 0;
     max-width: 800px;
-    color: var(--main-black);
+    /* color: var(--main-black); */
+    color: white;
 }
 
 @media  (max-width:900px) {
@@ -434,7 +461,10 @@ main {
 }
 .card-logo{
     width: 55px;
+        border-radius: 100%;
+    padding: 0;
     margin-top: 17px;
+    
 }
 .card-content p{
     color: var(--semi-black);
