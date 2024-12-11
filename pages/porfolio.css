@@ -429,6 +429,8 @@ header nav a{
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    row-gap: 100px !important;
     gap: 20px;
 }
 
@@ -442,6 +444,7 @@ header nav a{
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 50px;
 }
 
 .ach:hover {

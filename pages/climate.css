@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --clean-white: #F4F4F4;
+    --white-grey: #F8F8FF;
+    --roboto: "Roboto Condensed", sans-serif;
+    --border-grey: #303030;
+    /* --main-green:#55DF5E; */
+    --main-green:#79B900;
+    --main-black:#001819;
+    --semi-black:#7A7A7A;
+}
+/************* layout */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: var(--roboto);
+
+}
+
+
+/* climate home */
+
+.climate-home{
+   background-position: top;
+   background-size: cover;
+   background-attachment: fixed;
+    height: 600px;
+}
+
+.climate-home div{
+    background-color:var(--white-grey) ;
+    width: 100%;
+    padding: 30px 100px;
+}
+
+.climate-home div h1{
+    font-size: 3rem;
+}
+
+.climate-home div span{
+    color: var(--semi-black);
+}
+
+/* details css */
+
+.details{
+padding: 100px 120px;
+position: relative;
+}
+.details p{
+font-size: 1.5rem;
+max-width: 550px;
+font-weight: 600;
+color: var(--main-black);
+}
+.details p span{
+color: var(--main-green);
+}
+.side-image{
+
+}
+/* what to do  */
+
+.what-to-do{
+    padding: 200px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.what-con{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    justify-content: space-evenly;
+
+}
+.what-col{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    max-width: 350px;
+
+}
+.what-col p{
+    text-align: center;
+
+}
+.what-col h1{
+    color: var(--main-green);
+}
+
