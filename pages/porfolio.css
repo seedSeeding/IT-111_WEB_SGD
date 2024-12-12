@@ -297,14 +297,16 @@ header nav a:hover {
     .hero-prof{
         display: flex;
         flex-direction: column;
+        justify-content: center;
         
     }
     .hero-prof span {
         position: relative;
         text-align: center;
-     
+       
+        min-width: 100%;
         font-size: 1.2rem;
-        max-width: 80%;
+       
       
     }
     .hero-proj-col {
@@ -510,43 +512,54 @@ header nav a:hover {
     align-items: center;
     justify-content: center;
 }
+
 @media (max-width:1075px) {
     .about{
         flex-direction: column;
         flex-wrap:wrap;
         justify-content: center;
-        padding-top: 100px;
+        padding-top: 300px;
     }
     .about h1, .about p{
         max-width: 100%;
     }
     .about div img{
-        width: 300px;
-        
-        
+        width: 200px;
     }
 
     .about div:nth-child(2){
         display: flex;
         align-items: center;
-        justify-content: left;
+        justify-content: center;
         align-self: first baseline;
         margin: 0;
+        width: 100%;
+ 
         
     }
     .about div:nth-child(1){
+        width: 100%;
+        
         display: flex;
         flex-direction: column;
-        justify-content: left;
+        justify-content: center;
         padding: 10px 5%;
     }
     .about h1{
         font-size: 1rem;
-        max-width: 130px;
+        
     }
      .about p{
-        max-width: 80%;
+        
         font-size: .9rem;
+    }
+}
+@media (max-width:725px) {
+    .about{
+        flex-direction: column;
+        flex-wrap:wrap;
+        justify-content: center;
+        padding-top: 100px;
     }
 }
 .what-i-do {
