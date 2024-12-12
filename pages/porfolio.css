@@ -155,10 +155,12 @@ header nav a:hover {
     flex-direction: column;
     position: relative;
    
-    background-image: linear-gradient(to bottom right, #30c7b5, #00ac97, #006055, #17544b), url('../images/porfolio/bg.png');
+    /* background-image: linear-gradient(to bottom right, #30c7b5, #00ac97, #006055, #17544b), url('../images/porfolio/bg.png'); */
     background-attachment: fixed;
 }
-
+.hero,.colab{
+    background-image: url('../images/porfolio/backgrounds/green.avif');
+}
 .hero-intro {
     width: 100%;
     color: var(--white-grey);
@@ -908,7 +910,7 @@ header nav a:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: linear-gradient(to bottom right, #30c7b5, #00ac97, #006055, #17544b), url('../images/porfolio/bg.png');
+    
     background-size: cover;
     background-position: center;
 }
