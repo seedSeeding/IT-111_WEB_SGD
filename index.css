@@ -509,9 +509,7 @@ main {
     flex-direction: column;
 }
 
-.cards-section:focus-within .card-con {
-    animation: up 3s ease-in-out;
-}
+
 
 .card-con {
     margin-top: 60px;
