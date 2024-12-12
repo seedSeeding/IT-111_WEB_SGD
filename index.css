@@ -437,6 +437,15 @@ main {
         .about div:nth-child(2) img {
             display: none;
         }
+        .about {
+
+            display: flex;
+            align-items:stretch; 
+            justify-content: center;
+            flex-direction: row;
+            padding: 50px 10px;
+            
+        }
     }
     /*** text banner */
 
