@@ -5,93 +5,234 @@
     --white-grey: #F8F8FF;
     --roboto: "Roboto Condensed", sans-serif;
     --border-grey: #303030;
-    /* --main-green:#55DF5E; */
-    --main-green:#79B900;
-    --main-black:#001819;
-    --semi-black:#7A7A7A;
+    --main-green: #79B900;
+    --main-black: #001819;
+    --semi-black: #7A7A7A;
 }
-/************* layout */
+
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: var(--roboto);
-
+    margin: 0;
+    padding: 0;
 }
 
-
-/* climate home */
-
-.climate-home{
-   background-position: top;
-   background-size: cover;
-   background-attachment: fixed;
+/* Climate home */
+.climate-home {
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
     height: 600px;
 }
 
-.climate-home div{
-    background-color:var(--white-grey) ;
+.climate-home div {
+    background-color: var(--white-grey);
     width: 100%;
     padding: 30px 100px;
 }
 
-.climate-home div h1{
+.climate-home div h1 {
     font-size: 3rem;
 }
 
-.climate-home div span{
+.climate-home div span {
     color: var(--semi-black);
 }
 
-/* details css */
+/* Details CSS */
+.details {
+    padding: 100px 120px;
+    position: relative;
+}
 
-.details{
-padding: 100px 120px;
-position: relative;
+.details p {
+    font-size: 1rem;
+    max-width: 550px;
+    font-weight: 300;
+    color: var(--main-black);
 }
-.details p{
-font-size: 1.5rem;
-max-width: 550px;
-font-weight: 600;
-color: var(--main-black);
-}
-.details p span{
-color: var(--main-green);
-}
-.side-image{
 
+.details p span {
+    color: var(--main-green);
+    font-weight: 600;
+    font-size: 1.4rem;
 }
-/* what to do  */
 
-.what-to-do{
-    padding: 200px 120px;
+.side-image {
+    position: absolute;
+    bottom: -210px;
+    width: 40%;
+    object-fit: cover;
+    height: 400px;
+    z-index: 1;
+    right: 0;
+    max-width: 100%;
+    border-radius: 500px 0 0 500px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.side-image img {
+    height: 100%;
+    object-fit: cover;
+    width: cover;
+    border-radius: 500px 0 0 500px;
+    
+}
+
+/* What to do */
+.what-to-do {
+    padding: 250px 120px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
+    background-color: var(--clean-white);
 }
 
-.what-con{
+.what-con {
     margin-top: 50px;
     display: flex;
     align-items: center;
     gap: 100px;
     justify-content: space-evenly;
-
+    flex-wrap: wrap;
 }
-.what-col{
+
+.what-col {
     display: flex;
     align-items: center;
     justify-items: center;
     flex-direction: column;
     max-width: 350px;
-
+  
+    position: relative;
 }
-.what-col p{
+
+.what-col p {
     text-align: center;
+    border: 1px solid var(--main-green);
+    padding: 10px;
+    height: 300px;
+    min-width: 350px;
+    font-size: .9rem;
+    padding-top: 30px;
+    max-height: 400px;
+}
+
+.what-col h1 {
+    color: var(--main-black);
+    position: absolute;
+    top: -15px;
+    background-color: var(--clean-white);
+    padding: 0px 10px;
+}
+
+
+
+@media (max-width: 1200px) {
+    .climate-home div h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .climate-home div {
+        padding: 20px 30px;
+    }
+    
+    .details {
+        padding: 50px 20px;
+    }
+    
+    .what-con {
+        gap: 30px;
+    }
+    .side-image {
+        position: static;
+        width: 100%;
+        border-radius: 0%;
+        margin-top: 100px;
+        object-fit: contain;
+        box-shadow: none;
+
+    }
+    .side-image img{
+        width: 100%;
+        border-radius: 0%;
+        box-shadow: none;
+
+
+    }
+}
+
+@media (max-width: 768px) {
+  
+    
+    .details p {
+        font-size: 1.2rem;
+    }
+   
+    .what-con {
+        flex-direction: column;
+    }
+    
+    .climate-home div {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .climate-home {
+        height: 400px;
+    }
+    
+    .climate-home div h1 {
+        font-size: 2rem;
+    }
+    
+    .details p {
+        font-size: 1rem;
+    }
+    
+    .details {
+        padding: 20px;
+    }
+    
+    .what-col {
+        max-width: 100%;
+    }
+    
+    .what-to-do {
+        padding: 100px 20px;
+    }
+}
+
+
+/* related */
+
+.related{
+    width: 100%;
+    padding: 40px 100px
+}
+.related h1{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.related-con{
+    width: 100%;
+    display: flex;
+    row-gap: 10px;
+    flex-direction: column;
+    justify-content: stretch;
 
 }
-.what-col h1{
-    color: var(--main-green);
-}
 
+.related-con a{
+    color: black;
+    font-size: .8rem;
+    width: 100%;
+}
+.related-con a:visited{
+    color: var(--semi-black);
+}

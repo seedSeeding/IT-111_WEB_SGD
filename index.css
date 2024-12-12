@@ -50,7 +50,7 @@ section {
     /* background-color: var(--white-grey); */
     background: var(--white-grey);
     border-bottom: 1px solid #dededec1;
-    padding: 10px 60px;
+    padding: 0px 60px;
     position: sticky;
     top: 0;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -92,7 +92,10 @@ section {
     line-height: 2;
     position: relative;
   }
-  
+  .header-img{
+    margin: 0;
+    padding: 0;
+  }
   .link::before {
     content: '';
     width: 0;
@@ -109,6 +112,123 @@ section {
     width: 100%;
     left: 0;
   }
+
+#nav-btn {
+    display: none;
+  }
+  
+  
+  .menu-icon {
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .back-icon {
+    display: none; 
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+  
+  .fa-bars {
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .fa-xmark {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #nav {
+    display: none;
+  }
+  
+  .nav-con {
+    display: none;
+  }
+  
+  #nav-btn:checked ~ #nav {
+    display: flex;
+  }
+  
+  @media (max-width: 790px) {
+    .nav-con {
+      display: block;
+    }
+   
+    .menu-icon {
+      display: block;
+    }
+  
+    .home-header nav {
+      display: none;
+      flex-direction: column;
+    }
+  
+    #nav {
+      position: fixed;
+      height: 100%;
+      flex-direction: column;
+      background-color: var(--main-green);
+      color: var(--white-grey);
+      justify-content: left;
+      padding: 0;
+      width: 50%;
+      right: 0;
+      top: 0;
+      z-index: 9999;
+      animation: slideIn 0.3s ease-in-out;
+    }
+  
+    #nav ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 0;
+    }
+  
+    #nav ul li a {
+      color: white;
+      padding: 1rem;
+    }
+  
+
+    #nav-btn:checked ~ #nav {
+      display: flex;
+    }
+  
+    
+    #nav-btn:checked ~ #nav .back-icon {
+      display: flex; 
+    }
+  
+    .back-icon {
+      display: none; 
+      justify-content: flex-end;
+      padding: 1rem;
+      align-self: first baseline;
+    }
+  
+    
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+  }
+  
+ 
 /**************** utensils */
 
 .btn-1 {
