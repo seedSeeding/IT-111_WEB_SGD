@@ -901,6 +901,12 @@ main {
 
 
 @media (max-width: 768px) {
+    .member-acc a {
+       
+        display: block;
+        animation: none;
+    }
+    
     .member {
         width: 250px;
         height: 350px;
