@@ -31,7 +31,11 @@
     background-attachment: fixed;
     height: 600px;
 }
-
+.page-link a{
+    color: black;
+    text-decoration: none;
+    color: var(--main-green);
+}
 .climate-home div {
     background-color: var(--white-grey);
     width: 100%;
