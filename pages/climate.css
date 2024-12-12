@@ -17,7 +17,13 @@
     margin: 0;
     padding: 0;
 }
+/* body{
+    background-image: url('../images/porfolio/backgrounds/white.avif');
+    background-position: center;
+    background-attachment: fixed;
 
+    background-repeat: no-repeat;
+} */
 /* Climate home */
 .climate-home {
     background-position: top;
