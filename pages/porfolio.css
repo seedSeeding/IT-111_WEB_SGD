@@ -319,6 +319,7 @@ header nav a:hover {
     }
     .hero-proj-col img{
         width: 100% !important;
+        flex-direction: row;
     }
     .hero {
         padding: 10px 50px;
